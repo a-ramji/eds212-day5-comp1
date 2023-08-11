@@ -51,13 +51,14 @@ head(starwars)
 
 ```{r}
 # find the dimensions of starwars
-dim(starwars)
+dim(starwars) # 87 rows, 14 columns 
 ```
 
 ```{r}
 # make a histogram of character heights
 
-ggplot(data = starwars, aes(x = height)) +
+ggplot(data = starwars, aes(x = height,
+                            color = gender)) +
   geom_histogram() +
   theme_minimal()
 ```
@@ -65,7 +66,9 @@ ggplot(data = starwars, aes(x = height)) +
 ```{r}
 # make a scatterplot of height vs. weight
 
-ggplot(data = starwars, aes(x = height, y = mass)) +
+ggplot(data = starwars, aes(x = height, 
+                            y = mass, 
+                            color = sex)) +
   geom_point() +
   theme_minimal()
 ```
