@@ -96,14 +96,50 @@ na_mean_height <- mean(starwars$height)
 
 ```
 
+mean height (in cm)
+
 ```{r}
 mean_height <- mean(starwars$height, na.rm = TRUE)
 mean_height
 ```
 
-find and store the standard deviation of character heights
+find and store the standard deviation of character heights (in cm)
 
 ```{r}
 sd_height <- sd(starwars$height, na.rm = TRUE)
 sd_height
+```
+
+finding variance of character height
+
+```{r}
+var(starwars$height, na.rm = TRUE)
+```
+
+finding summary info --- by --- (other variables, like home world)
+
+## In-line reporting using code outputs
+
+The mean height of Star Wars characters is 174.38 cm with a standard deviation of 34.77 cm.
+
+(gross to manually type in values because these values are manually disconnected from the values calculated in some code earlier.)
+
+we make mistakes (and should expect to) when manually copying and pasting or typing values out
+
+in computational notebooks, we can pull values to report them in text -- automatically!
+
+we can use two back-ticks \`\-- \` with r variable_name in between the back-ticks
+
+better version:
+
+The mean height of Star Wars characters is `r mean_height` cm with a standard deviation of `r sd_height` cm.
+
+long and un-rounded numbers here. we can wrap them in a round function
+
+mean: `r round(mean_height, digits = 2)` cm
+
+standard deviation: `r round(sd_height, digits = 2)` cm
+
+```{r}
+
 ```
