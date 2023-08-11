@@ -5,3 +5,11 @@ editor: visual
 ---
 
 ## Day 5 Computer Session 1
+
+```{r}
+library(tidyverse)
+```
+
+```{r}
+
+```
