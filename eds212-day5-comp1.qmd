@@ -1,15 +1,71 @@
 ---
-title: "eds212-day5-comp1"
-format: html
+title: "Day 5 Session 1"
+format: 
+  html: 
+    code-fold: true
+    code-summary: "Show me the code!"
 editor: visual
+execute:
+  echo: true 
+  warning: false 
 ---
 
 ## Day 5 Computer Session 1
+
+-   setting warning to false is a cleaner way to show your code -- still read them when you're writing your code, but your audience probably doesn't need to read those messages :)
+
+-   code folding gives your audience an option to hide or reveal the code
+
+    -   done in the top section in html format -- enter, + 2 spaces, enter + 2 spaces:
+
+    title: "Day 5 Session 1"
+
+    format:
+
+    html:
+
+    code-fold: true
+
+    code-summary: "Show me the code!"
+
+    editor: visual
+
+    execute:
+
+    echo: true
+
+    warning: false
+
+-   you can also set options for each chunk of code individually
 
 ```{r}
 library(tidyverse)
 ```
 
-```{r}
+## Explore the StarWars data set
 
+```{r}
+# look at the first 6 lines
+head(starwars)
+```
+
+```{r}
+# find the dimensions of starwars
+dim(starwars)
+```
+
+```{r}
+# make a histogram of character heights
+
+ggplot(data = starwars, aes(x = height)) +
+  geom_histogram() +
+  theme_minimal()
+```
+
+```{r}
+# make a scatterplot of height vs. weight
+
+ggplot(data = starwars, aes(x = height, y = mass)) +
+  geom_point() +
+  theme_minimal()
 ```
